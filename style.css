@@ -1,0 +1,236 @@
+/* =========================================================
+   Le Petit Jardin - Feuille de style personnalisée
+   Palette : 
+   - Vert olive foncé : #3A4A3A (couleur principale)
+   - Beige/crème : #F5F0E6 (fond clair)
+   - Terracotta/orange brûlé : #C5703B (accent)
+   ========================================================= */
+
+:root {
+  --couleur-principale: #3A4A3A;
+  --couleur-fond: #F5F0E6;
+  --couleur-accent: #C5703B;
+  --couleur-texte: #2C2C2C;
+}
+
+/* Typographie uniforme sur tout le site */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  color: var(--couleur-principale);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  background-color: var(--couleur-principale) !important;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--couleur-fond) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--couleur-fond) !important;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--couleur-accent) !important;
+}
+
+/* ---------- BOUTONS ---------- */
+.btn-accent {
+  background-color: var(--couleur-accent);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 28px;
+  border-radius: 4px;
+}
+
+.btn-accent:hover {
+  background-color: #a8592b;
+  color: #fff;
+}
+
+.btn-outline-accent {
+  border: 2px solid var(--couleur-accent);
+  color: var(--couleur-accent);
+  font-weight: 600;
+  padding: 8px 26px;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--couleur-accent);
+  color: #fff;
+}
+
+/* ---------- HERO (bandeau d'accueil) ---------- */
+.hero {
+  position: relative;
+  color: #fff;
+}
+
+.hero .carousel-item img {
+  height: 90vh;
+  min-height: 480px;
+  object-fit: cover;
+  filter: brightness(55%);
+}
+
+.hero-texte {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+}
+
+.hero-texte h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.hero-texte p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 70px 0;
+}
+
+.section-titre {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-titre p {
+  color: var(--couleur-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.fond-alterne {
+  background-color: #EDE6D6;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+/* ---------- ACCORDION ---------- */
+.accordion-button {
+  font-weight: 600;
+  color: var(--couleur-principale);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--couleur-principale);
+  color: #fff;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--couleur-accent);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: var(--couleur-principale);
+  color: #f0ece1;
+  padding: 40px 0 20px;
+}
+
+footer a {
+  color: #f0ece1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--couleur-accent);
+}
+
+footer h5 {
+  color: #fff;
+}
+
+/* ---------- DIVERS ---------- */
+.icone-accent {
+  font-size: 2.2rem;
+  color: var(--couleur-accent);
+  margin-bottom: 15px;
+}
+
+.page-banniere {
+  background-color: var(--couleur-principale);
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-banniere h1 {
+  color: #fff;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--couleur-principale);
+}
+
+.form-control:focus {
+  border-color: var(--couleur-accent);
+  box-shadow: 0 0 0 0.2rem rgba(197, 112, 59, 0.2);
+}
+
+/* Photo d'équipe / à propos */
+.photo-rond {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Carte Google Maps */
+.carte-contact iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  border: 0;
+}
